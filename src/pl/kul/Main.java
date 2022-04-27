@@ -15,7 +15,11 @@ public class Main {
         // c. Oblicz, ile liczb jest większych od średniej elementów tablicy
         int[][] tablica = utworzTablice2D();
         printTab2D(tablica);
-        System.out.println("Slad macierzy: " + findTraceIn2DArray(tablica));
+        System.out.println("Ślad macierzy: " + findTraceIn2DArray(tablica));
         int maxInTab = findMaxIn2DArray(tablica);
+        double mean = findMeanIn2DArray(tablica);
+        System.out.println("Średnia tablicy: " + mean);
+        System.out.println("Jest " + findHowManyElementsIn2DArrayAreLargerThanMean(tablica) +
+                " większych od średniej tablicy.");
     }
 }
