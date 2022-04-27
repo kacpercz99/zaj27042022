@@ -69,6 +69,6 @@ public class Main {
         int[][] tablica = utworzTablice2D();
         printTab2D(tablica);
         System.out.println("Slad macierzy: " + findTraceIn2DArray(tablica));
-        findMaxIn2DArray(tablica);
+        int maxInTab = findMaxIn2DArray(tablica);
     }
 }
