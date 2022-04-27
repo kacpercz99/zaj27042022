@@ -1,9 +1,9 @@
 package pl.kul;
 
-import java.util.Arrays;
 import java.util.Random;
 
-import static java.util.Arrays.*;
+import static java.util.Arrays.fill;
+import static java.util.Arrays.stream;
 
 public class Zad6 {
     public static void zad6() {
