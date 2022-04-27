@@ -32,6 +32,14 @@ public class Main {
         }
     }
 
+    public static int findTraceIn2DArray(int[][] tab) {
+        int sum = 0;
+        for (int i = 0; i < tab.length; i++) {
+            sum += tab[i][i];
+        }
+        return sum;
+    }
+
     public static int findMaxIn2DArray(int[][] tab) {
         int maxX = 0;
         int maxY = 0;
@@ -60,6 +68,7 @@ public class Main {
         // c. Oblicz, ile liczb jest większych od średniej elementów tablicy
         int[][] tablica = utworzTablice2D();
         printTab2D(tablica);
+        System.out.println("Slad macierzy: " + findTraceIn2DArray(tablica));
         findMaxIn2DArray(tablica);
     }
 }
