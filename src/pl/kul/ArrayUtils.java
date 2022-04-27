@@ -41,21 +41,18 @@ public class ArrayUtils {
         return sum;
     }
 
-    public static int findMaxIn2DArray(int[][] tab) {
-        int maxX = 0;
-        int maxY = 0;
-        int max = tab[0][0];
+    public static ElementAndIndexes findMaxIn2DArray(int[][] tab) {
+        ElementAndIndexes result = new ElementAndIndexes(tab[0][0],0,0);
         for (int i = 0; i < tab.length; i++) {
             for (int j = 0; j < tab[i].length; j++) {
-                if (tab[i][j] > max) {
-                    max = tab[i][j];
-                    maxX = i;
-                    maxY = j;
+                if (tab[i][j] > result.element) {
+                    result.element = tab[i][j];
+                    result.i = i;
+                    result.j = j;
                 }
             }
         }
-        System.out.printf("Max w tablicy: %d\n Wiersz: %d\n Kolumna: %d\n", max, maxY + 1, maxX + 1);
-        return max;
+        return result;
     }
 
     public static double findMeanIn2DArray(int[][] tab) {
