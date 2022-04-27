@@ -1,12 +1,9 @@
 package pl.kul;
 
-import java.util.Arrays;
-
-import static pl.kul.ArrayUtils.*;
-
 public class Main {
 
     public static void main(String[] args) {
+        /*
         int[][] tablica = utworzTablice2D();
         printTab2D(tablica);
         System.out.println("Ślad macierzy: " + findTraceIn2DArray(tablica));
@@ -26,6 +23,9 @@ public class Main {
                 " większych od średniej tablicy.");
 
         double[] srednieWierszowTablicy = obliczSrednieWierszami(tablica);
-        System.out.println(Arrays.toString(srednieWierszowTablicy));
+        System.out.println("Srednie wierszami:\n" + Arrays.toString(srednieWierszowTablicy));
+        */
+
+        Zad6.zad6();
     }
 }

@@ -42,7 +42,7 @@ public class ArrayUtils {
     }
 
     public static ElementAndIndexes findMaxIn2DArray(int[][] tab) {
-        ElementAndIndexes result = new ElementAndIndexes(tab[0][0],0,0);
+        ElementAndIndexes result = new ElementAndIndexes(tab[0][0], 0, 0);
         for (int i = 0; i < tab.length; i++) {
             for (int j = 0; j < tab[i].length; j++) {
                 if (tab[i][j] > result.element) {
@@ -80,12 +80,13 @@ public class ArrayUtils {
 
     public static double[] obliczSrednieWierszami(int[][] tab) {
         double[] srednieWierszow = new double[tab.length];
-        for(int i = 0; i < tab.length; i++) {
-            for(int j = 0; j < tab[i].length; j++) {
-                srednieWierszow[i]+=tab[i][j];
+        for (int i = 0; i < tab.length; i++) {
+            for (int j = 0; j < tab[i].length; j++) {
+                srednieWierszow[i] += tab[i][j];
             }
-            srednieWierszow[i]/=tab[i].length;
+            srednieWierszow[i] /= tab[i].length;
         }
         return srednieWierszow;
     }
+
 }
