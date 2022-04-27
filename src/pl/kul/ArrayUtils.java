@@ -2,6 +2,7 @@ package pl.kul;
 
 import java.util.Random;
 import java.util.Scanner;
+
 public class ArrayUtils {
 
     public static int[][] utworzTablice2D() {
@@ -55,5 +56,28 @@ public class ArrayUtils {
         }
         System.out.printf("Max w tablicy: %d\n Wiersz: %d\n Kolumna: %d\n", max, maxY + 1, maxX + 1);
         return max;
+    }
+
+    public static double findMeanIn2DArray(int[][] tab) {
+        double sum = 0;
+        for (int[] row : tab) {
+            for (int element : row) {
+                sum += element;
+            }
+        }
+        return sum / (tab.length * tab[0].length);
+    }
+
+    public static int findHowManyElementsIn2DArrayAreLargerThanMean(int[][] tab) {
+        int counter = 0;
+        double mean = findMeanIn2DArray(tab);
+        for (int[] row : tab) {
+            for (int element : row) {
+                if (element > mean) {
+                    counter++;
+                }
+            }
+        }
+        return counter;
     }
 }
