@@ -1,5 +1,7 @@
 package pl.kul;
 
+import java.util.Arrays;
+
 import static pl.kul.ArrayUtils.*;
 
 public class Main {
@@ -22,5 +24,8 @@ public class Main {
         System.out.println("Średnia tablicy: " + mean);
         System.out.println("Jest " + findHowManyElementsIn2DArrayAreLargerThanMean(tablica) +
                 " większych od średniej tablicy.");
+
+        double[] srednieWierszowTablicy = obliczSrednieWierszami(tablica);
+        System.out.println(Arrays.toString(srednieWierszowTablicy));
     }
 }

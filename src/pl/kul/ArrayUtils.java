@@ -77,4 +77,15 @@ public class ArrayUtils {
         }
         return counter;
     }
+
+    public static double[] obliczSrednieWierszami(int[][] tab) {
+        double[] srednieWierszow = new double[tab.length];
+        for(int i = 0; i < tab.length; i++) {
+            for(int j = 0; j < tab[i].length; j++) {
+                srednieWierszow[i]+=tab[i][j];
+            }
+            srednieWierszow[i]/=tab[i].length;
+        }
+        return srednieWierszow;
+    }
 }
